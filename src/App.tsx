@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { ChakraProvider, Box } from "@chakra-ui/react";
+import { MemoryRouter, Route, Routes } from "react-router";
+import Websites from "./pages/Websites";
+import AddWebsite from "./pages/AddWebsite";
+import EditWebsite from "./pages/EditWebsite";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <MemoryRouter>
+        <Box className="App">
+          <Routes>
+            <Route path="/" element={<Websites />} />
+            <Route path="add-website" element={<AddWebsite />} />
+            <Route path="websites" element={<Websites />}>
+              <Route path=":websiteId" element={<EditWebsite />} />
+            </Route>
+          </Routes>
+        </Box>
+      </MemoryRouter>
+    </ChakraProvider>
   );
 }
 
