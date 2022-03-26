@@ -14,8 +14,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Websites />} />
             <Route path="add-website" element={<AddWebsite />} />
-            <Route path="websites" element={<Websites />}>
-              <Route path=":websiteId" element={<EditWebsite />} />
+            <Route path="websites/edit" element={<Websites />}>
+              <Route path="edit/:websiteId" element={<EditWebsite />} />
             </Route>
           </Routes>
         </Box>

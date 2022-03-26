@@ -5,7 +5,13 @@ import WebsitesList from "../components/WebsitesList";
 
 const Websites = () => {
   return (
-    <Box p={5} bgColor="blue.100" textAlign="left" rounded="2xl">
+    <Box
+      p={5}
+      bgColor="blue.100"
+      textAlign="left"
+      h="100%"
+      rounded="2xl"
+    >
       <Heading size="md" py={3}>
         Your Webtimers ⏱️
       </Heading>

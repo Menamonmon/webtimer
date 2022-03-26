@@ -8,3 +8,13 @@ export type WebsiteItem = {
   is_nuclear: boolean; //
   is_atomic: boolean; // permanent blocking
 };
+
+export type WebsiteFieldName =
+  | "id"
+  | "websiteUrl"
+  | "dateAdded"
+  | "minutesAllowed"
+  | "minutesUsed"
+  | "lastOpened"
+  | "is_nuclear"
+  | "is_atomic";
